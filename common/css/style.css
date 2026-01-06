@@ -22,10 +22,10 @@ body{position: relative; }
 .section2 .experience-wrap .experience .experience-title::before{content: ''; border: 5px solid #9796f0; background-color: #fff; border-radius: 100%; width: 10px; height: 10px; display: block; position: absolute; left: -50px; top: 0;}
 .section3{padding: 60px 0; background-color: #fff;}
 .section3 .title{margin-bottom: 32px;}
-.section3 .skill-grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;}
+.section3 .skill-grid{display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;}
 .section3 .skill-card{display: flex; align-items: center; gap: 16px; padding: 18px; border-radius: 16px; background: linear-gradient(145deg, #ffffff, #f6f5ff); box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);}
 .section3 .skill-thumb{flex: 0 0 72px; width: 72px; height: 72px; border-radius: 14px; background-color: #f4f4f5; display: flex; align-items: center; justify-content: center; overflow: hidden;}
-.section3 .skill-thumb img{width: 100%; height: 100%; object-fit: cover;}
+.section3 .skill-thumb img{width: 100%; height: 100%; object-fit: contain;}
 .section3 .skill-meta{flex: 1;}
 .section3 .skill-top{display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;}
 .section3 .skill-name{font-size: 18px; font-weight: 600;}
@@ -79,8 +79,13 @@ body{position: relative; }
     .section2 .experience-wrap .experience{padding-left: 0;}
     .section2 .experience-wrap .experience{text-align: center;}
     .section3{padding: 40px 0;}
+    .section3 .skill-grid{grid-template-columns: repeat(2, minmax(0, 1fr));}
     .section3 .skill-card{padding: 16px;}
     .section3 .skill-name{font-size: 16px;}
     .section4 .portfolio_wrap .item{width: 100%;}
+}
+
+@media screen and (max-width:640px) {
+    .section3 .skill-grid{grid-template-columns: repeat(1, minmax(0, 1fr));}
 }
 
